@@ -1,0 +1,17 @@
+.cr-search-form {
+  position: relative;
+
+  &__icon-search {
+    position: absolute;
+    left: 8px;
+    color:rgb(214, 176, 7);
+    background-color: #B6A19E
+
+    
+  }
+
+  &__input {
+    /* stylelint-disable-next-line */
+    padding-left: 35px !important;
+  }
+}

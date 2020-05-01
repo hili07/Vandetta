@@ -1,0 +1,31 @@
+// override bootstrap 4 variables
+
+// $blue: #2196f3;
+// $indigo: #536dfe;
+// $purple: #9c27b0;
+// $pink: #ff4081;
+// $red: #f44336;
+// $orange: #ff9800;
+// $yellow: #ffeb3b;
+// $green: #4caf50;
+// $teal: #009688;
+// $cyan: #00bcd4;
+// $white: #fff;
+$theme-colors: (
+  "primary": rgb(219, 8, 121),
+  "secondary": rgb(36, 16, 32),
+  "success": #45b649,
+  "danger": #f85032,
+  "warning": rgba(241, 207, 12, 0.883),
+  "info": #00c9ff
+);
+
+$enable-gradients: true;
+
+// card
+//
+$card-cap-bg: #fff;
+
+
+// sidebar
+$cr-sidebar-width: 224px;
