@@ -1,130 +1,88 @@
-import Page from 'components/Page';
-import React from 'react';
-import { Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardHeader, CardText, Col, DropdownItem, DropdownMenu, DropdownToggle, Row, UncontrolledButtonDropdown } from 'reactstrap';
+import React, { Fragment } from 'react';
 
+import { Row, Col, CardBody, Card, Button } from 'reactstrap';
+import stock1 from './.././assets/img/products/vpp.jpg';
+import stock2 from './.././assets/img/products/veepe.jpg';
+import stock3 from './.././assets/img/products/v.jpg';
 
-
-const ButtonGroupPage = () => {
+export default function LivePreviewExample() {
   return (
-    <Page
-      title="Button Groups"
-      breadcrumbs={[{ name: 'button groups', active: true }]}
-    >
+    <Fragment>
       <Row>
-        <Col md={6}>
-          <Card>
-            <CardHeader>Button Groups</CardHeader>
+        <Col xl="4" lg="6">
+          <Card className="mb-5">
+            <img alt="..." className="card-img-top" src={stock1} />
             <CardBody>
-              <ButtonGroup className="mr-3 mb-3">
-                <Button color="primary">Left</Button>
-                <Button color="primary">Middle</Button>
-                <Button color="primary">Right</Button>
-              </ButtonGroup>
+              <h4 className="card-title font-weight-bold font-size-lg">
+             Modupe Bello
+              </h4>
+              <h6>14S01/047</h6>
+              <p className="card-text">
+                Over the years, women have occupied less-tasking roles. As change and progress are inevitable,
+                the women have a great chance of being the best leaders. Stand with me!.
+               
 
-              <ButtonGroup className="mr-3 mb-3">
-                <Button>Left</Button>
-                <Button>Middle</Button>
-                <Button>Right</Button>
-              </ButtonGroup>
+
+
+              </p>
+              <Button
+                tag="a"
+                color="primary"
+                href="#/"
+                onClick={e => e.preventDefault()}>
+                VOTE
+              </Button>
             </CardBody>
           </Card>
         </Col>
-
-        <Col md={6}>
-          <Card>
-            <CardHeader>Button Toolbar</CardHeader>
+        <Col xl="4" lg="6">
+          <Card className="mb-5">
+            <img alt="..." className="card-img-top" src={stock2} />
             <CardBody>
-              <ButtonToolbar>
-                <ButtonGroup className="mr-2">
-                  <Button>1</Button>
-                  <Button>2</Button>
-                  <Button>3</Button>
-                  <Button>4</Button>
-                </ButtonGroup>
-                <ButtonGroup className="mr-2">
-                  <Button>5</Button>
-                  <Button>6</Button>
-                  <Button>7</Button>
-                </ButtonGroup>
-                <ButtonGroup className="mr-2">
-                  <Button>8</Button>
-                </ButtonGroup>
-              </ButtonToolbar>
+              <h4 className="card-title font-weight-bold font-size-lg">
+                Sylvia Egbuson
+              </h4>
+              <h6>18N05/082</h6>
+              <p className="card-text">
+               The only way to conquer the force of negativity, is to be a positive force to reckon with.
+               I, Sylvia radiate positivity, strenght and ressilence. A vote for me, is a vote to prosperity.
+               I will not take any vote for granted, as such I will uphold my end of this great honor.
+              </p>
+              <Button
+                tag="a"
+                color="primary"
+                href="#/"
+                onClick={e => e.preventDefault()}>
+                VOTE
+              </Button>
             </CardBody>
           </Card>
         </Col>
+        <Col xl="4" className="d-none d-xl-block">
+          <Card className="mb-5">
+            <img alt="..." className="card-img-top" src={stock3} />
+            <CardBody>
+              <h4 className="card-title font-weight-bold font-size-lg">
+               Chukwudubem Okwulehie
+              </h4>
+              <h6>15S06/019</h6>
+              <p className="card-text">
+               I stand for the progress of the student body, I will not relent until a positive change is made in every aspect.
+               Together we CONQUER!.
+              </p>
+              <Button
+                tag="a"
+                color="primary"
+                href="#/"
+                onClick={e => e.preventDefault()}>
+               VOTE
+              </Button>
+            </CardBody>
+          </Card>
+        </Col>
+       
       </Row>
-      <Row>
-        <Col md={6}>
-          <Card>
-            <CardHeader>Nesting</CardHeader>
-            <CardBody>
-              <ButtonGroup>
-                <Button>1</Button>
-                <Button>2</Button>
-                <UncontrolledButtonDropdown>
-                  <DropdownToggle caret>Dropdown</DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>Dropdown Link</DropdownItem>
-                    <DropdownItem>Dropdown Link</DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledButtonDropdown>
-              </ButtonGroup>
-            </CardBody>
-          </Card>
-        </Col>
-
-        <Col md={6}>
-          <Card>
-            <CardHeader>Vertical variation</CardHeader>
-            <CardBody>
-              <ButtonGroup vertical>
-                <Button>1</Button>
-                <Button>2</Button>
-                <UncontrolledButtonDropdown>
-                  <DropdownToggle caret>Dropdown</DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>Dropdown Link</DropdownItem>
-                    <DropdownItem>Dropdown Link</DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledButtonDropdown>
-              </ButtonGroup>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col md={6}>
-          <Card>
-            <CardHeader>Sizing</CardHeader>
-            <CardBody>
-              <CardText>Large</CardText>
-              <ButtonGroup size="lg">
-                <Button>Left</Button>
-                <Button>Middle</Button>
-                <Button>Right</Button>
-              </ButtonGroup>
-
-              <CardText className="mt-3">Default</CardText>
-              <ButtonGroup>
-                <Button>Left</Button>
-                <Button>Middle</Button>
-                <Button>Right</Button>
-              </ButtonGroup>
-
-              <CardText className="mt-3">Small</CardText>
-              <ButtonGroup size="sm">
-                <Button>Left</Button>
-                <Button>Middle</Button>
-                <Button>Right</Button>
-              </ButtonGroup>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-    </Page>
+    </Fragment>
   );
-};
+}
 
-export default ButtonGroupPage;

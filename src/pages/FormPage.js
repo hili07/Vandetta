@@ -1,166 +1,89 @@
-import Page from 'components/Page';
-import React from 'react';
-import 'styles/components/_content.scss';
-import {
+import React, { Fragment } from 'react';
 
-  Card,
-  CardBody,
-  CardHeader,
-  Col,
-  Form,
+import { Row, Col, CardBody, Card, Button } from 'reactstrap';
+import stock1 from './.././assets/img/products/gend.jpg';
+import stock2 from './.././assets/img/products/gen.jpg';
+import stock3 from './.././assets/img/products/gennn.jpg';
 
-  FormGroup,
-  FormText,
-  Input,
-  Label,
-  Row,
-} from 'reactstrap';
-
-const FormPage = () => {
+export default function LivePreviewExample() {
   return (
-    <div className = 'formm'>
-    <Page title="Faulty Laptop" breadcrumbs={[{ name: 'Faulty Latop', active: true }]}> 
+    <Fragment>
       <Row>
-        <Col sm={12} md={{'size':8, 'offset':2}} >
-          <Card>
-            <CardHeader>DETAILS</CardHeader>
+        <Col xl="4" lg="6">
+          <Card className="mb-5">
+            <img alt="..." className="card-img-top" src={stock1} />
             <CardBody>
-              <Form>
-              <FormGroup>
-                  <Label for="examplename">Item</Label>
-              <Input className="mb-2"  />
-              </FormGroup>
-              <FormGroup>
-                  <Label for="examples/n">Serial Number</Label>
-                  <Input className="mb-2"  bsSize="sm" />
-              </FormGroup>
-              <FormGroup>
-                  <Label for="examplename">Make/Model</Label>
-              <Input className="mb-2"  />
-              </FormGroup>
-              <FormGroup>
-                  <Label for="exampleNumber">Job ID</Label>
-                  <Input
-                    type="number"
-                    name="number"
-                    id="exampleNumber"
-                    placeholder="Enter the Job no."
-                  />
-                </FormGroup>
-              <FormGroup>
-                  <Label for="exampleSelect">Quantity</Label>
-                  <Input type="select" name="select">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </Input>
-                </FormGroup>
-                <FormGroup>
-                  <Label for="examplename">User's Full Name</Label>
-              <Input className="mb-2"  />
-              </FormGroup>
-              
-                <FormGroup>
-                  <Label for="exampleEmail">Email</Label>
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="Enter user's e-mail"
-                  />
-                  </FormGroup>
-                <FormGroup>
-                  <Label for="exampleSelect">Department</Label>
-                  <Input type="select" name="select">
-                    <option>Audit Risk Management Control and Compliance</option>
-                    <option>Finance and Accounts</option>
-                    <option>Human Resources and Administration</option>
-                    <option>Information Technology</option>
-                    <option>Network Planning and Performance</option>
-                    <option>Operations</option>
-                    <option>Quality Management</option>
-                    <option>Retail</option>
-                    <option>Sales and Marketing</option>
-                    <option>Service Deployment Unit</option>
-                    <option>Service Management</option>
-                    <option>Tech Innovation </option>
-                  </Input>
-                </FormGroup>
-                <FormGroup>
-                  <Label for="examplePassword">Password</Label>
-                  <Input
-                    type="password"
-                    name="password"
-                    placeholder=" Enter password "
-                  />
-                </FormGroup>
-                
-                
-                
-                <FormGroup>
-                  <Label for="exampleDate">Date Collected</Label>
-                  <Input
-                    type="date"
-                    name="date"
-                    id="exampleDate"
-                    placeholder="Enter date "
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="exampleTime">Time Collected</Label>
-                  <Input
-                    type="time"
-                    name="time"
-                    id="exampleTime"
-                    placeholder="time placeholder"
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="exampleText">Fault Description</Label>
-                  <Input type="textarea" name="text" />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="examplename">Partner's Name</Label>
-              <Input className="mb-2"  />
-              </FormGroup>
-              <FormGroup>
-                  <Label for="exampleDate">Date Returned</Label>
-                  <Input
-                    type="date"
-                    name="date"
-                    id="exampleDate"
-                    placeholder="Enter date "
-                  />
-                  </FormGroup>
-                  <FormGroup>
-                  <Label for="exampleText">Job Done</Label>
-                  <Input type="textarea" name="text" />
-                </FormGroup>
-                <FormGroup>
-                </FormGroup>
-                <FormGroup>
-                  <Label for="exampleFile">Reciept Attachment</Label>
-                  <Input type="file" name="file" />
-                  <FormText color="muted">
-                    
-                  </FormText>
-                </FormGroup>
-                
-              </Form>
+              <h4 className="card-title font-weight-bold font-size-lg">
+                Amarachi Ndukwe
+              </h4>
+              <h6>18N01/027</h6>
+              <p className="card-text">
+              It starts by standing with the students, listening to voices unheard, and recognizing potential where 
+              others see despair. It makes communication work for us, not control us. VOTE for me!.
+              </p>
+              <Button
+                tag="a"
+                color="primary"
+                href="#/"
+                onClick={e => e.preventDefault()}>
+                VOTE
+              </Button>
             </CardBody>
           </Card>
         </Col>
-</Row>
-        
-      
+        <Col xl="4" lg="6">
+          <Card className="mb-5">
+            <img alt="..." className="card-img-top" src={stock2} />
+            <CardBody>
+              <h4 className="card-title font-weight-bold font-size-lg">
+                Amanda Osetame
+              </h4>
+              <h6>16S06/019</h6>
+              <p className="card-text">
+             
+              I stand for accountability, perseverance and resillence. 
+              A vote for me is a step towards GREATNESS, let's get one step closer to that a vote at a time.
+              </p>
+              <Button
+                tag="a"
+                color="primary"
+                href="#/"
+                onClick={e => e.preventDefault()}>
+                VOTE
+              </Button>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xl="4" className="d-none d-xl-block">
+          <Card className="mb-5">
+            <img alt="..." className="card-img-top" src={stock3} />
+            <CardBody>
+              <h4 className="card-title font-weight-bold font-size-lg">
+               Timi Oyebajo
+              </h4>
+              <h6>16S04/081</h6>
+              <p className="card-text">
+               
+                I believe that creating a cohesive, vibrant community that unites both the young and the old 
+              is important to nurturing the growth of students. I believe that togetherness in the community are 
+              the anchors of this student body, creating and maintaining this sense of community. Therefore, I 
+              believe that the students' views should be taken into consideration and supported by members 
+              of a community as important reminders and symbols of cohesive community.
 
-        
-
-     
-    </Page>
-    </div>
+              </p>
+              <Button
+                tag="a"
+                color="primary"
+                href="#/"
+                onClick={e => e.preventDefault()}>
+               VOTE
+              </Button>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
+    </Fragment>
   );
-};
+}
 
-export default FormPage;
+

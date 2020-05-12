@@ -1,138 +1,85 @@
-import Page from 'components/Page';
-import Typography from 'components/Typography';
-import React from 'react';
-import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
+import React, { Fragment } from 'react';
 
-const TypographyPage = () => {
+import { Row, Col, CardBody, Card, Button } from 'reactstrap';
+import stock1 from './.././assets/img/products/veep.jpg';
+import stock2 from './.././assets/img/products/COLUMBUS SHORT.jpg';
+import stock3 from './.././assets/img/products/TRE.jpg';
+
+
+export default function LivePreviewExample() {
   return (
-    <Page
-      title="Typography"
-      breadcrumbs={[{ name: 'typography', active: true }]}>
+    <Fragment>
       <Row>
-        <Col>
-          <Card>
-            <CardHeader>Headings</CardHeader>
+        <Col xl="4" lg="6">
+          <Card className="mb-5">
+            <img alt="..." className="card-img-top" src={stock1} />
             <CardBody>
-              <Typography type="h1">h1 Heading</Typography>
-              <Typography type="h2">h2 Heading</Typography>
-              <Typography type="h3">h3 Heading</Typography>
-              <Typography type="h4">h4 Heading</Typography>
-              <Typography type="h5">h5 Heading</Typography>
-              <Typography type="h6">h6 Heading</Typography>
+              <h4 className="card-title font-weight-bold font-size-lg">
+               Tosin Majekodunmi
+              </h4>
+              <h6>15S01/088</h6>
+              <p className="card-text">
+                I am counting on this great student body to deem me fit for 
+                this position. Vote Tosin,Vote Trust, Vote Treasurer!.
+              </p>
+              <Button
+                tag="a"
+                color="primary"
+                href="#/"
+                onClick={e => e.preventDefault()}>
+                VOTE
+              </Button>
             </CardBody>
           </Card>
         </Col>
-
-        <Col>
-          <Card>
-            <CardHeader>Display</CardHeader>
+        
+        <Col xl="4" className="d-none d-xl-block">
+          <Card className="mb-5">
+            <img alt="..." className="card-img-top" src={stock3} />
             <CardBody>
-              <Typography type="display-1">Display 1</Typography>
-              <Typography type="display-2">Display 2</Typography>
-              <Typography type="display-3">Display 3</Typography>
-              <Typography type="display-4">Display 4</Typography>
+              <h4 className="card-title font-weight-bold font-size-lg">
+               Trisha Orabomen
+              </h4>
+              <h6>18N03/061</h6>
+              <p className="card-text">
+               Some are leaders and some lead with the followers. I will put each and every student into consideration
+               during my tenure as the treasurer, I will be tranquil and dependable. VOTE WISELY!. 
+              </p>
+              <Button
+                tag="a"
+                color="primary"
+                href="#/"
+                onClick={e => e.preventDefault()}>
+               VOTE
+              </Button>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xl="4" className="d-none d-xl-block">
+          <Card className="mb-5">
+            <img alt="..." className="card-img-top" src={stock2} />
+            <CardBody>
+              <h4 className="card-title font-weight-bold font-size-lg">
+             Oladeji Olateju-Stewart
+              </h4>
+              <h6>16L01/181</h6>
+              <p className="card-text">
+                The Teju Treasurer Translation stands for accountability, financial responsibility,
+                and trust, it stands with the authority to stand on behalf of the students. I am here for you!.
+
+              </p>
+              <Button
+                tag="a"
+                color="primary"
+                href="#/"
+                onClick={e => e.preventDefault()}>
+               VOTE
+              </Button>
             </CardBody>
           </Card>
         </Col>
       </Row>
-
-      <Row className="mb-3" />
-
-      <Row>
-        <Col>
-          <Card>
-            <CardHeader>Text Colors</CardHeader>
-            <CardBody>
-              <Typography className="text-primary">.text-primary</Typography>
-              <Typography className="text-secondary">
-                .text-secondary
-              </Typography>
-              <Typography className="text-success">.text-success</Typography>
-              <Typography className="text-danger">.text-danger</Typography>
-              <Typography className="text-warning">.text-warning</Typography>
-              <Typography className="text-info">.text-info</Typography>
-              <Typography className="text-light bg-dark">
-                .text-light
-              </Typography>
-              <Typography className="text-dark">.text-dark</Typography>
-              <Typography className="text-muted">.text-muted</Typography>
-              <Typography className="text-white bg-dark">
-                .text-white
-              </Typography>
-            </CardBody>
-          </Card>
-        </Col>
-
-        <Col>
-          <Card>
-            <CardHeader>Inline text elements</CardHeader>
-            <CardBody>
-              <p>
-                You can use the mark tag to <mark>highlight</mark> text.
-              </p>
-              <p>
-                <del>
-                  This line of text is meant to be treated as deleted text.
-                </del>
-              </p>
-              <p>
-                <s>
-                  This line of text is meant to be treated as no longer
-                  accurate.
-                </s>
-              </p>
-              <p>
-                <ins>
-                  This line of text is meant to be treated as an addition to the
-                  document.
-                </ins>
-              </p>
-              <p>
-                <u>This line of text will render as underlined</u>
-              </p>
-              <p>
-                <small>
-                  This line of text is meant to be treated as fine print.
-                </small>
-              </p>
-              <p>
-                <strong>This line rendered as bold text.</strong>
-              </p>
-              <p>
-                <em>This line rendered as italicized text.</em>
-              </p>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col>
-          <Card>
-            <CardHeader>Blockquote</CardHeader>
-            <CardBody>
-              <Typography type="blockquote">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                posuere erat a ante.
-              </Typography>
-            </CardBody>
-          </Card>
-        </Col>
-
-        <Col>
-          <Card>
-            <CardHeader>Lead</CardHeader>
-            <CardBody>
-              <Typography type="lead">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                posuere erat a ante.
-              </Typography>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-    </Page>
+    </Fragment>
   );
-};
+}
 
-export default TypographyPage;
