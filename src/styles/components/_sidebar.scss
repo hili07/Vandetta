@@ -40,7 +40,7 @@
     z-index: 3;
     // sublime light
     background: #fc5c7d; /* fallback for old browsers */
-    background: linear-gradient(to bottom, rgb(141, 88, 125),rgb(92, 54, 80));
+    background: linear-gradient(to bottom, rgb(24, 15, 21),rgb(22, 13, 19));
     opacity: 0.8;
     text-decoration-color: black;
   }
@@ -119,9 +119,9 @@
       color: theme-color(light);
 
       &:hover {
-        background:rgba(240, 6, 76, 0.692);
+        background:#ff9800;
     
-        opacity: 1.80;
+        opacity: 1;
       }
     }
   }

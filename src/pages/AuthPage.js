@@ -1,7 +1,7 @@
 import AuthForm, { STATE_LOGIN } from 'components/AuthForm';
 import React from 'react';
 import { Card, Col, Row } from 'reactstrap';
-
+import image from "assets/img/wal.jpg";
 class AuthPage extends React.Component {
   handleAuthState = authState => {
     if (authState === STATE_LOGIN) {
@@ -17,15 +17,35 @@ class AuthPage extends React.Component {
 
   render() {
     return (
+      <div
+      style={{
+        backgroundImage: "url(" + image + ")",
+        backgroundSize: "cover",
+        backgroundPosition: "top center",
+        paddingLeft:"0px",
+        paddingRight: "50px"
+      }}
+    >
+    
       <Row
         style={{
           height: '100vh',
           justifyContent: 'center',
           alignItems: 'center',
+          
         }}>
         <Col md={6} lg={4}>
-          <Card body>
+          <Card body
+          style={{
+            backgroundColor:"#1a1919",
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            
+          }}>
+         
+        
             <AuthForm
+           
               authState={this.props.authState}
               onChangeAuthState={this.handleAuthState}
               onLogoClick={this.handleLogoClick}
@@ -33,6 +53,7 @@ class AuthPage extends React.Component {
           </Card>
         </Col>
       </Row>
+      </div>
     );
   }
 }

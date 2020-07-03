@@ -17,10 +17,11 @@ const Page = ({
   children,
   ...restProps
 }) => {
-  const classes = bem.b('px-3', className);
+  const classes = bem.b('pl-5 ', className);
 
   return (
-    <Tag className={classes} {...restProps}>
+    <Tag 
+    className={classes} {...restProps}>
       <div className={bem.e('header')}>
         {title && typeof title === 'string' ? (
           <Typography type="h1" className={bem.e('title')}>
@@ -43,6 +44,7 @@ const Page = ({
       </div>
       {children}
     </Tag>
+    
   );
 };
 

@@ -6,13 +6,15 @@ import { Navbar, Nav, NavItem } from 'reactstrap';
 
 const Footer = () => {
   return (
+    <div className= "pl-5">
     <Navbar>
       <Nav navbar>
         <NavItem>
-          2019 IT DEPT, VDT Communications.
+          2020, FINAL YEAR PROJECT.
         </NavItem>
       </Nav>
     </Navbar>
+    </div>
   );
 };
 

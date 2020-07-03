@@ -1,4 +1,4 @@
-import logo200Image from 'assets/img/logo/logo_200.png';
+import logo200Image from 'assets/img/logo/acu.jpg';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
@@ -41,6 +41,8 @@ class AuthForm extends React.Component {
       showLogo,
       usernameLabel,
       usernameInputProps,
+      matricLabel,
+      matricInputProps,
       passwordLabel,
       passwordInputProps,
       confirmPasswordLabel,
@@ -50,9 +52,13 @@ class AuthForm extends React.Component {
     } = this.props;
 
     return (
-      <Form onSubmit={this.handleSubmit}>
+     
+      <Form 
+      className="pl-0px"
+      onSubmit={this.handleSubmit}>
+        
         {showLogo && (
-          <div className="text-center pb-4">
+          <div className="text-center pb-4 ">
             <img
               src={logo200Image}
               className="rounded"
@@ -60,25 +66,49 @@ class AuthForm extends React.Component {
               alt="logo"
               onClick={onLogoClick}
             />
+             
           </div>
         )}
+        
+          
+           
+        
         <FormGroup>
-          <Label for={usernameLabel}>{usernameLabel}</Label>
+        
+         
+          <Label 
+          className="text-center text-muted"
+          for={usernameLabel}>{usernameLabel}</Label>
           <Input {...usernameInputProps} />
         </FormGroup>
         <FormGroup>
-          <Label for={passwordLabel}>{passwordLabel}</Label>
+          <Label 
+          className="text-center text-muted"
+          for={matricLabel}>{matricLabel}</Label>
+          <Input {...matricInputProps} />
+        </FormGroup>
+        
+        <FormGroup>
+          <Label 
+          className="text-center text-muted"
+          for={passwordLabel}>{passwordLabel}</Label>
           <Input {...passwordInputProps} />
         </FormGroup>
         {this.isSignup && (
           <FormGroup>
-            <Label for={confirmPasswordLabel}>{confirmPasswordLabel}</Label>
+            <Label 
+            className="text-center text-muted"
+            for={confirmPasswordLabel}>{confirmPasswordLabel}</Label>
             <Input {...confirmPasswordInputProps} />
           </FormGroup>
         )}
-        <FormGroup check>
+        <FormGroup 
+        className="text-warning"
+        check>
           <Label check>
-            <Input type="checkbox" />{' '}
+            <Input 
+             
+            type="checkbox" />{' '}
             {this.isSignup ? 'Agree the terms and policy' : 'Remember me'}
           </Label>
         </FormGroup>
@@ -92,7 +122,8 @@ class AuthForm extends React.Component {
         </Button>
 
         <div className="text-center pt-1">
-          <h6>or</h6>
+          <h6 className="text-muted">
+            or</h6>
           <h6>
             {this.isSignup ? (
               <a href="#login" onClick={this.changeAuthState(STATE_LOGIN)}>
@@ -105,7 +136,8 @@ class AuthForm extends React.Component {
             )}
           </h6>
         </div>
-
+        
+      
         {children}
       </Form>
     );
@@ -120,6 +152,8 @@ AuthForm.propTypes = {
   showLogo: PropTypes.bool,
   usernameLabel: PropTypes.string,
   usernameInputProps: PropTypes.object,
+  matricLabel: PropTypes.string,
+  matricInputProps: PropTypes.object,
   passwordLabel: PropTypes.string,
   passwordInputProps: PropTypes.object,
   confirmPasswordLabel: PropTypes.string,
@@ -130,15 +164,21 @@ AuthForm.propTypes = {
 AuthForm.defaultProps = {
   authState: 'LOGIN',
   showLogo: true,
-  usernameLabel: 'Username',
+
+  usernameLabel: 'Full Name',
   usernameInputProps: {
     type: 'text',
-    placeholder: 'your@email.com',
+    
+  },
+  matricLabel: 'Matric No',
+  usernameInputProps: {
+    type: 'varchar',
+    
   },
   passwordLabel: 'Password',
   passwordInputProps: {
     type: 'password',
-    placeholder: 'your password',
+
   },
   confirmPasswordLabel: 'Confirm Password',
   confirmPasswordInputProps: {

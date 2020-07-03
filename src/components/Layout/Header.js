@@ -79,6 +79,7 @@ class Header extends React.Component {
     const { isNotificationConfirmed } = this.state;
 
     return (
+      <div className= "pl-5">
       <Navbar light expand className={bem.b('bg-white')}>
         <Nav navbar className="mr-2">
           <Button outline onClick={this.handleSidebarControlButton}>
@@ -166,6 +167,7 @@ class Header extends React.Component {
           </NavItem>
         </Nav>
       </Navbar>
+      </div>
     );
   }
 }

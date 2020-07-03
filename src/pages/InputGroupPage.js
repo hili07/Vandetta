@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react';
-
+import {Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { Row, Col, CardBody, Card, Button } from 'reactstrap';
 import stock1 from './.././assets/img/products/sd.jpg';
 import stock2 from './.././assets/img/products/spoo.jpg';
 import stock3 from './.././assets/img/products/sdd.jpg';
-
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+const TypographyPage = React.lazy(() => import('pages/TypographyPage'));
 export default function LivePreviewExample() {
   return (
+    <div className= "px-5">
     <Fragment>
       <Row>
         <Col xl="4" lg="6">
@@ -43,7 +46,7 @@ export default function LivePreviewExample() {
                 Together we can restore sport activities to what is should be,
                 I need your votes to make this a reality. 
               </p>
-              <p>Let's so this!.</p>
+              <p>Let's do this!.</p>
               <Button
                 tag="a"
                 color="primary"
@@ -80,6 +83,16 @@ export default function LivePreviewExample() {
         </Col>
       </Row>
     </Fragment>
+    <div>
+          <Route exact path='/typography' component={TypographyPage}/>
+          <Link to="/typography" className='button'>
+            <Button className='float-right' type="button"  color= "primary" size= "lg">
+       
+                NEXT       
+            </Button>
+          </Link>
+          </div>
+    </div>
   );
 }
 

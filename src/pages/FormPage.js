@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react';
-
+import {Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { Row, Col, CardBody, Card, Button } from 'reactstrap';
 import stock1 from './.././assets/img/products/gend.jpg';
 import stock2 from './.././assets/img/products/gen.jpg';
 import stock3 from './.././assets/img/products/gennn.jpg';
-
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+const InputGroupPage = React.lazy(() => import('pages/InputGroupPage'));
 export default function LivePreviewExample() {
   return (
+    <div className= "pl-5">
     <Fragment>
       <Row>
         <Col xl="4" lg="6">
@@ -83,6 +86,16 @@ export default function LivePreviewExample() {
         </Col>
       </Row>
     </Fragment>
+    <div>
+          <Route exact path='/input-groups' component={InputGroupPage}/>
+          <Link to="/input-groups" className='button'>
+            <Button className='float-right' type="button"  color= "primary" size= "lg">
+       
+                NEXT       
+            </Button>
+          </Link>
+          </div>
+    </div>
   );
 }
 

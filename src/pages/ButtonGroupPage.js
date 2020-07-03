@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
-
+import {Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { Row, Col, CardBody, Card, Button } from 'reactstrap';
 import stock1 from './.././assets/img/products/vpp.jpg';
 import stock2 from './.././assets/img/products/veepe.jpg';
 import stock3 from './.././assets/img/products/v.jpg';
-
+const FormPage = React.lazy(() => import('pages/FormPage'));
 export default function LivePreviewExample() {
   return (
+    <div className= "pl-5">
     <Fragment>
       <Row>
         <Col xl="4" lg="6">
@@ -83,6 +85,16 @@ export default function LivePreviewExample() {
        
       </Row>
     </Fragment>
+    <div>
+          <Route exact path='/forms' component={FormPage} />
+          <Link to="/forms" className='button'>
+            <Button className='float-right' type="button"  color= "primary" size= "lg">
+       
+                NEXT       
+            </Button>
+          </Link>
+          </div>
+    </div>
   );
 }
 

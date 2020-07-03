@@ -1,5 +1,5 @@
 import logo200Image from 'assets/img/logo/acu.jpg';
-import sidebarBgImage from 'assets/img/sidebar/sidebar-12.jpg';
+import sidebarBgImage from 'assets/img/sidebar/sidebar-3.jpg';
 import SourceLink from 'components/SourceLink';
 import React from 'react';
 
@@ -92,7 +92,7 @@ const navItems = [
   { to: '/widgets', name: 'widgets', exact: false, Icon: MdWidgets },*/
 ];
 const pageContents = [
-  { to: '/login', name: 'login / signup', exact: false, Icon: MdAccountCircle },
+  { to: '/login', name: 'logout', exact: false, Icon: MdAccountCircle },
  /* {
     to: '/login-modal',
     name: 'login modal',
@@ -196,11 +196,30 @@ class Sidebar extends React.Component {
                 </NavItem>
               ))}
             </Collapse>
+<NavItem>
+           
+           
+
+
+  {pageContents.map(({ to, name, exact, Icon }, index) => (
+    <NavItem key={index} className={bem.e('nav-item')}>
+      <BSNavLink
+        id={`navItem-${name}-${index}`}
+        className="text-uppercase"
+        tag={NavLink}
+        to={to}
+        activeClassName="active"
+        exact={exact}
+      >
+        <Icon className={bem.e('nav-item-icon')} />
+        <span className="">{name}</span>
+      </BSNavLink>
+    </NavItem>
+  ))}
 
            
-       
-           
             
+          </NavItem>
           </Nav>
           </div>
         
