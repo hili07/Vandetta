@@ -9,6 +9,7 @@ class AuthPage extends React.Component {
     } else {
       this.props.history.push('/signup');
     }
+    this.props.history.push('/capture');
   };
 
   handleLogoClick = () => {

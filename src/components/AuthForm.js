@@ -1,8 +1,10 @@
 import logo200Image from 'assets/img/logo/acu.jpg';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
-
+const CapturePage = React.lazy(() => import('pages/CapturePage'));
 class AuthForm extends React.Component {
   get isLogin() {
     return this.props.authState === STATE_LOGIN;
@@ -105,11 +107,22 @@ class AuthForm extends React.Component {
         <FormGroup 
         className="text-warning"
         check>
+         <div>
+          <Route exact path='/capture' component={CapturePage} />
+          <Link to="/capture" className='button'>
+            <Button className='float-right' type="button"  color= "primary" size= "sm"
+            onClick = {this.isSignup}
+            >
+       
+             Enroll Image  
+            </Button>
+          </Link>
+          </div>
           <Label check>
             <Input 
              
             type="checkbox" />{' '}
-            {this.isSignup ? 'Agree the terms and policy' : 'Remember me'}
+            {this.isSignup ? 'Agree to the terms and policy' : 'Remember me'}
           </Label>
         </FormGroup>
         <hr />
@@ -133,6 +146,7 @@ class AuthForm extends React.Component {
               <a href="#signup" onClick={this.changeAuthState(STATE_SIGNUP)}>
                 Signup
               </a>
+
             )}
           </h6>
         </div>
